@@ -1,0 +1,6 @@
+{
+  "name": "Cinematic Developer Portfolio",
+  "description": "A premium, high-fidelity developer portfolio featuring a 5-layer atmospheric visual system, technical HUD overlay, and smooth intersection reveals inspired by Matveyan.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
