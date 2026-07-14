@@ -1,15 +1,20 @@
 import React, { useEffect, useRef, useState, useCallback } from "react";
 
-export default function SilverKnightSequence() {
+interface SilverKnightSequenceProps {
+  onLoadProgress?: (loaded: number, total: number) => void;
+  onReady?: () => void;
+}
+
+export default function SilverKnightSequence({ onLoadProgress, onReady }: SilverKnightSequenceProps) {
   const canvasRef = useRef<HTMLCanvasElement | null>(null);
   
   // Cache for all 240 preloaded HTMLImageElements
   const cachedFramesRef = useRef<HTMLImageElement[]>([]);
   const currentFrameIndexRef = useRef<number>(0);
   const [isLoaded, setIsLoaded] = useState<boolean>(false);
-  const [loadedCount, setLoadedCount] = useState<number>(0);
   
   const TOTAL_FRAMES = 240;
+  const readyFiredRef = useRef(false);
 
   // Render the current frame onto the canvas
   const drawCurrentFrame = useCallback(() => {
@@ -71,16 +76,21 @@ export default function SilverKnightSequence() {
     const checkComplete = () => {
       if (!active) return;
       loaded++;
-      setLoadedCount(loaded);
+      onLoadProgress?.(loaded, total);
 
-      // Transition to active rendering as soon as we have a buffer (e.g. 30 frames) or all frames
-      if ((loaded === 30 || loaded === total) && !isLoaded) {
+      // Draw the first frame as soon as it arrives so the canvas isn't blank
+      if (loaded === 1) {
         setTimeout(() => {
-          if (active) {
-            setIsLoaded(true);
-            drawCurrentFrame();
-          }
-        }, 50);
+          if (active) drawCurrentFrame();
+        }, 0);
+      }
+
+      // Only transition to ready once ALL frames are loaded for a smooth experience
+      if (loaded === total && !readyFiredRef.current) {
+        readyFiredRef.current = true;
+        setIsLoaded(true);
+        drawCurrentFrame();
+        onReady?.();
       }
     };
 
@@ -90,14 +100,6 @@ export default function SilverKnightSequence() {
       const img = new Image();
 
       img.onload = () => {
-        // Render the very first frame immediately if it loads early
-        if (i === 1) {
-          setTimeout(() => {
-            if (active) {
-              drawCurrentFrame();
-            }
-          }, 0);
-        }
         checkComplete();
       };
       img.onerror = () => {
@@ -122,7 +124,7 @@ export default function SilverKnightSequence() {
     return () => {
       active = false;
     };
-  }, [drawCurrentFrame]);
+  }, [drawCurrentFrame, onLoadProgress, onReady]);
 
   // Listen for resize using ResizeObserver to match parent bounds and scale with devicePixelRatio
   useEffect(() => {
@@ -230,25 +232,8 @@ export default function SilverKnightSequence() {
           filter: "none",
           backdropFilter: "none"
         }}
-        className={`pointer-events-none transition-opacity duration-700 ${
-          isLoaded ? "opacity-100" : "opacity-0"
-        }`}
+        className="pointer-events-none"
       />
-
-      {/* Luxury Preloader */}
-      {!isLoaded && (
-        <div className="absolute inset-0 flex flex-col items-center justify-center gap-3 bg-[#030305] transition-opacity duration-500">
-          <div className="w-48 h-[2px] bg-white/10 rounded-full overflow-hidden">
-            <div 
-              className="h-full bg-gradient-to-r from-[#10b981] via-white to-[#10b981] transition-all duration-200 ease-out shadow-[0_0_12px_rgba(16,185,129,0.5)]"
-              style={{ width: `${Math.round((loadedCount / TOTAL_FRAMES) * 100)}%` }}
-            />
-          </div>
-          <span className="font-mono text-[10px] tracking-[0.25em] text-white/50 animate-pulse">
-            LOADING_SILVER_KNIGHT // {loadedCount} / {TOTAL_FRAMES}
-          </span>
-        </div>
-      )}
     </div>
   );
 }

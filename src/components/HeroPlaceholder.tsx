@@ -2,7 +2,12 @@ import React from "react";
 import { ArrowDown } from "lucide-react";
 import SilverKnightSequence from "./SilverKnightSequence";
 
-export default function HeroPlaceholder() {
+interface HeroPlaceholderProps {
+  onLoadProgress?: (loaded: number, total: number) => void;
+  onReady?: () => void;
+}
+
+export default function HeroPlaceholder({ onLoadProgress, onReady }: HeroPlaceholderProps) {
   const handleScrollClick = (e: React.MouseEvent<HTMLButtonElement>) => {
     e.preventDefault();
     const element = document.querySelector("#work");
@@ -44,7 +49,7 @@ export default function HeroPlaceholder() {
         className="absolute inset-0 w-full h-full z-[5] pointer-events-none flex items-center justify-center"
         style={{ filter: "none", backdropFilter: "none" }}
       >
-        <SilverKnightSequence />
+        <SilverKnightSequence onLoadProgress={onLoadProgress} onReady={onReady} />
       </div>
 
       {/* z-10 Optional Dark Overlay (Subtle dark overlay only, no blur / vignette / glow) */}
@@ -132,4 +137,3 @@ export default function HeroPlaceholder() {
     </section>
   );
 }
-
