@@ -15,63 +15,63 @@ interface Project {
 const PROJECTS: Project[] = [
   {
     id: "fintech-design-system",
-    category: "DEFI DESIGN SYSTEM",
-    title: "Fintech Design System",
-    description: "A comprehensive, security-audited design language built for decentralized finance protocols. Standardizing high-frequency trading desks, atomic swaps, and multi-signature custody dashboards into a single unified design token scheme.",
-    tags: ["React", "Tailwind CSS", "Figma", "Design Tokens"],
+    category: "COMMERCIAL BRANDING",
+    title: "Aesthetic Rigor Brand Campaign",
+    description: "A high-fashion commercial video campaign focusing on premium product aesthetics. Engineered pacing, custom sound design overlays, and advanced high-contrast color grading to communicate brand value.",
+    tags: ["DaVinci Resolve", "Resolve Color", "Sound Design", "Color Grading"],
     ctaUrl: "#",
     visualType: "fintech",
-    stat: "420+ COMPONENTS"
+    stat: "12M+ VIEWS"
   },
   {
     id: "croco-wallet",
-    category: "CRYPTO PORTABLE APP",
-    title: "CrocoWallet",
-    description: "Hardware-connected, non-custodial secure crypto wallet engineered on Solana. Features biometrics integration, instant swap protocols, cold-storage bridging, and custom RPC node failover pathways.",
-    tags: ["Solana SDK", "React Native", "Rust", "Web3Auth"],
+    category: "GAME MOTION TRAILER",
+    title: "Echoes of the Vanguard",
+    description: "Fast-paced cinematic gameplay trailer featuring dynamic speed ramps, complex visual effects compositions, 3D tracking integration, and high-impact sound design.",
+    tags: ["Resolve Edit", "Resolve Fusion", "Sound Synthesis", "VFX Composite"],
     ctaUrl: "#",
     visualType: "wallet",
-    stat: "1.2M ACTIVE USERS"
+    stat: "4K CINEMATIC RELEASE"
   },
   {
     id: "crypto-portfolio",
-    category: "DATA MONITORING TERMINAL",
-    title: "Crypto Portfolio",
-    description: "An ultra-fast client tracking terminal for institutional digital asset portfolios. Implements real-time Monte Carlo risk modeling, historical yield analysis, and latency-optimized API routing.",
-    tags: ["D3.js", "WebSocket", "GraphQL", "Tailwind"],
+    category: "DOCUMENTARY FILM",
+    title: "The Digital Frontier",
+    description: "A compelling short-form documentary chronicling high-tech innovators. Crafted a narrative-driven pacing rhythm, restored archival footage, and applied a cinematic film print emulation look.",
+    tags: ["DaVinci Resolve", "Resolve Edit", "Film Emulation", "Archival Audio"],
     ctaUrl: "#",
     visualType: "portfolio",
-    stat: "< 12MS REFRESH LATENCY"
+    stat: "FESTIVAL SELECTION"
   },
   {
     id: "telegram-wallet",
-    category: "WEB3 MINI-APP",
-    title: "Telegram Wallet Native",
-    description: "A native Telegram mini-app cryptocurrency wallet built for frictionless peer-to-peer transfers, secure escrow transactions, and instant gasless swaps on the TON blockchain network.",
-    tags: ["TON SDK", "React", "TypeScript", "Vite"],
+    category: "MUSIC VISUAL ART",
+    title: "Neon Horizons",
+    description: "A rhythm-synchronized, visual-heavy music video utilizing custom glitch overlays, camera movement tracking, strobe color effects, and seamless stylistic cuts.",
+    tags: ["Resolve Edit", "Glitch Effects", "Resolve Fusion", "Bespoke LUTs"],
     ctaUrl: "#",
     visualType: "telegram",
-    stat: "5.4M TRANSACTIONS/MO"
+    stat: "VFX HEAVY CUT"
   },
   {
     id: "cunex-crypto-widget",
-    category: "EMBEDDED FINANCE WIDGET",
-    title: "Cunex Crypto Widget",
-    description: "Seamless cross-chain swap widget designed for enterprise integration. Converts native tokens across 12 EVM networks with zero-slip quoting, automatic gas estimation, and deep liquidity aggregation.",
-    tags: ["Ethers.js", "Wagmi", "Web3Modal", "Tailwind"],
+    category: "ENTERPRISE PROMO",
+    title: "Apex Global Keynote Video",
+    description: "High-end corporate introduction and product demo film blending live-action executive interviews with sleek screen-capture tracking and custom callout overlays.",
+    tags: ["Resolve Fusion", "Resolve Edit", "UI Motion", "Sound Mixing"],
     ctaUrl: "#",
     visualType: "widget",
-    stat: "$85M+ SWAP VOLUME"
+    stat: "$10M+ CAMPAIGN REACH"
   },
   {
     id: "crypto-icons-library",
-    category: "VECTOR ASSET LIBRARY",
-    title: "Crypto Icons Library",
-    description: "The global industry-standard open-source vector iconography system for digital assets, covering 400+ coins, protocol tokens, and network badges with pixel-perfect precision.",
-    tags: ["SVG Assets", "Node CLI", "Figma API", "npm Package"],
+    category: "NARRATIVE DRAMA",
+    title: "Midnight Transit",
+    description: "A moody, low-light dramatic sequence requiring extensive color correction, noise reduction, and matching diverse camera profiles to achieve a cohesive, cinematic tone.",
+    tags: ["DaVinci Resolve", "ACES Workflow", "Noise Reduction", "HDR Grading"],
     ctaUrl: "#",
     visualType: "icons",
-    stat: "150K+ DOWNLOADS/MO"
+    stat: "BEST EDITING AWARD"
   }
 ];
 
@@ -90,7 +90,7 @@ export default function Portfolio() {
             </h2>
           </div>
           <p className="font-sans text-xs md:text-sm text-white/40 max-w-xs font-light leading-relaxed">
-            A curated portfolio of deep technical products, decentralized tools, and design languages built to survive production.
+            A curated portfolio of high-end cinematic edits, commercial campaigns, and narrative films graded and finished to perfection.
           </p>
         </div>
 

@@ -11,52 +11,51 @@ interface SkillCategory {
 const SKILL_CATEGORIES: SkillCategory[] = [
   {
     num: "01",
-    title: "Frontend Architecture",
-    tagline: "High-performance interface design and layout parsing.",
+    title: "Edit & Fairlight Assembly",
+    tagline: "Timeline editing, multi-cam assembly, and Fairlight audio synchronization.",
     technologies: [
-      { name: "React 19", level: "EXPERT" },
-      { name: "TypeScript", level: "EXPERT" },
-      { name: "Tailwind CSS v4", level: "EXPERT" },
-      { name: "Next.js", level: "EXPERT" },
-      { name: "HTML5 Canvas", level: "ADVANCED" }
+      { name: "Resolve Edit Page", level: "EXPERT" },
+      { name: "Fairlight Audio", level: "EXPERT" },
+      { name: "Multi-Cam Timeline", level: "EXPERT" },
+      { name: "Cut Page Tools", level: "ADVANCED" }
     ],
-    concepts: ["Atomic Token Systems", "Core Rendering Loops", "Modular Component Trees", "Accessibility (WCAG AA)"]
+    concepts: ["Timeline Construction", "Audio-Wave Syncing", "Fairlight Audio Mixing", "Dialogue Noise Cleaning"]
   },
   {
     num: "02",
-    title: "Cinematic Motion",
-    tagline: "Hardware-accelerated visual curves and scrolls.",
+    title: "Color Grading & Finish",
+    tagline: "Color space transformation, node-based look creation, and exposure matching.",
     technologies: [
-      { name: "GSAP Suite", level: "EXPERT" },
-      { name: "ScrollTrigger", level: "EXPERT" },
-      { name: "SVG Filter Craft", level: "ADVANCED" },
-      { name: "CSS Matrix Transitions", level: "EXPERT" }
+      { name: "DaVinci Color Page", level: "EXPERT" },
+      { name: "PowerGrades & Nodes", level: "EXPERT" },
+      { name: "ACES Color Space", level: "EXPERT" },
+      { name: "Resolve Color Match", level: "ADVANCED" }
     ],
-    concepts: ["Transform-Only Timelines", "GPU Layer Promoting", "Custom Easing Matrices", "30/60 FPS Render Cycles"]
+    concepts: ["Qualifiers & Secondary Grading", "Cinematic Film Emulation", "Skin Tone Preservation", "LUTs & Look Creation"]
   },
   {
     num: "03",
-    title: "Web3 & Protocol Integration",
-    tagline: "Low-latency network interfacing and decentralized layers.",
+    title: "Fusion VFX & Compositing",
+    tagline: "Node-based compositing, keying, tracking, and motion graphics.",
     technologies: [
-      { name: "Solana Web3.js", level: "ADVANCED" },
-      { name: "Ethers / Wagmi", level: "ADVANCED" },
-      { name: "WebSockets", level: "EXPERT" },
-      { name: "GraphQL / APIs", level: "EXPERT" }
+      { name: "Resolve Fusion Page", level: "ADVANCED" },
+      { name: "Fusion Delta Keyer", level: "ADVANCED" },
+      { name: "Planar Tracking", level: "EXPERT" },
+      { name: "3D Space & Motion", level: "CORE" }
     ],
-    concepts: ["Non-custodial Key Escrow", "Cross-chain swaps", "High-frequency payload filters", "State-merging hooks"]
+    concepts: ["Node-Based Compositing", "Chroma Keying", "Text & Motion Titles", "Image Stabilization"]
   },
   {
     num: "04",
-    title: "Development Pipeline",
-    tagline: "Sub-second hot-reloads and atomic compile engines.",
+    title: "Deliver & Asset Pipelines",
+    tagline: "Proxy generation, ingest workflows, project archives, and codec compression.",
     technologies: [
-      { name: "Vite Bundler", level: "EXPERT" },
-      { name: "Docker", level: "ADVANCED" },
-      { name: "esbuild", level: "ADVANCED" },
-      { name: "CI/CD Workflows", level: "ADVANCED" }
+      { name: "Resolve Deliver Page", level: "EXPERT" },
+      { name: "Media Management", level: "EXPERT" },
+      { name: "Resolve Project Server", level: "ADVANCED" },
+      { name: "DaVinci Archive (DRA)", level: "CORE" }
     ],
-    concepts: ["Custom Chunk Splitting", "Tree Shaking Audit", "Local Dev Optimization", "Dependency Pruning"]
+    concepts: ["Proxy Ingest & Cache Generation", "DRA Backup Creation", "Renders & Codec Export Settings", "Color Managed Timelines"]
   }
 ];
 
@@ -100,7 +99,7 @@ export default function Skills() {
             </h2>
           </div>
           <p className="font-sans text-xs md:text-sm text-white/40 max-w-xs font-light leading-relaxed">
-            A precise mapping of engineering competence, visual craftsmanship, and system optimization layers.
+            A precise mapping of post-production mastery, color science, and cinematic motion graphics capabilities.
           </p>
         </div>
 

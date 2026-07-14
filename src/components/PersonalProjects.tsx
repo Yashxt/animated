@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
-import { FolderGit2, Star, GitFork, ArrowUpRight } from "lucide-react";
+import { Film, Download, ArrowUpRight } from "lucide-react";
 
 interface LabProject {
   id: string;
@@ -14,43 +14,43 @@ interface LabProject {
 
 const LAB_PROJECTS: LabProject[] = [
   {
-    id: "atro-engine",
-    title: "Atro-Engine",
-    tag: "CANVAS_ENGINE",
-    description: "A hardware-accelerated, lightweight canvas graphics manager in TypeScript to map high-density point clouds and particle matrix distortions with physics-based mouse magnetism.",
-    stars: "142",
-    forks: "18",
-    tech: ["TypeScript", "HTML5 Canvas", "Math.js"],
+    id: "aces-lookdev",
+    title: "ACES Look Development Tool",
+    tag: "COLOR_LUT",
+    description: "A custom ACES-compliant LUT pack designed for low-light digital sensors (Sony FX3/A7SIII) to achieve rich skin tones and cinematic roll-off.",
+    stars: "420",
+    forks: "38",
+    tech: ["ACES Workflow", "Sony S-Log3", "Cube LUTs"],
     url: "#"
   },
   {
-    id: "web3-auth-bracing",
-    title: "Web3 Auth Security Tool",
-    tag: "SEC_AUDIT",
-    description: "Automated verification scanner analyzing biometric authentication flows and encrypted session state handshakes across non-custodial wallets.",
-    stars: "310",
-    forks: "45",
-    tech: ["Node.js", "Web3Auth", "Cryptology"],
+    id: "resolve-proxy-script",
+    title: "Resolve Proxy Automation Script",
+    tag: "PIPELINE_SCRIPT",
+    description: "A Python script designed for DaVinci Resolve script terminal to automatically set proxy generation settings and background sync workflows.",
+    stars: "180",
+    forks: "25",
+    tech: ["Resolve Scripting", "Python", "Deliver Presets"],
     url: "#"
   },
   {
-    id: "defi-quoting-aggregator",
-    title: "DeFi Swap Quoter",
-    tag: "API_AGGREGATOR",
-    description: "Multi-node swap router fetching instant cross-chain quotes from Uniswap and Raydium simultaneously, cache-optimizing results through local SQLite databases.",
-    stars: "185",
-    forks: "22",
-    tech: ["React", "SQLite WASM", "Raydium SDK"],
-    url: "#"
-  },
-  {
-    id: "cinematic-scroll-trigger",
-    title: "Scroll-Trigger Engine",
-    tag: "GRAPHICS_GLUE",
-    description: "A super-lightweight DOM scroll parser that calculates inertial dampening and pixel-perfect element matrix offsets under 5kb footprint.",
+    id: "resolve-fusion-glitches",
+    title: "Fusion Analog Glitch Templates",
+    tag: "FUSION_MACRO",
+    description: "A package of drag-and-drop analog glitch effects created natively as macros inside Resolve's Fusion page.",
     stars: "890",
-    forks: "78",
-    tech: ["Vanilla JS", "RequestAnimationFrame"],
+    forks: "124",
+    tech: ["Resolve Fusion", "Macro Presets", "CRT Emulation"],
+    url: "#"
+  },
+  {
+    id: "resolve-subtitle-importer",
+    title: "Resolve Subtitle Ingestion Tool",
+    tag: "EDIT_UTILITY",
+    description: "A post-production helper script to parse timecode files and automatically generate synchronized subtitle tracks on the Resolve Edit page.",
+    stars: "310",
+    forks: "15",
+    tech: ["Resolve Edit Page", "SRT Ingest", "Subtitle Tracks"],
     url: "#"
   }
 ];
@@ -87,14 +87,14 @@ export default function PersonalProjects() {
         <div id="projects-header" className="flex flex-col md:flex-row md:items-end justify-between mb-20 gap-6">
           <div className="flex flex-col gap-3">
             <span className="font-mono text-xs tracking-[0.3em] text-[#10b981]">
-              [ 04 // EXPERIMENTAL LAB ]
+              [ 04 // ASSET TOOLKIT ]
             </span>
             <h2 className="font-display text-3xl sm:text-4xl md:text-5xl font-light tracking-tight text-white">
-              OPEN SOURCE LAB
+              CREATIVE LAB
             </h2>
           </div>
           <p className="font-sans text-xs md:text-sm text-white/40 max-w-xs font-light leading-relaxed">
-            A repository of open-source components, technical tools, and experimental physics libraries built during late-night cycles.
+            A repository of open-source post-production utilities, color management scripts, and editing presets built for modern creative workflows.
           </p>
         </div>
 
@@ -114,20 +114,16 @@ export default function PersonalProjects() {
               {/* Card top banner */}
               <div className="flex items-center justify-between mb-6">
                 <div className="flex items-center gap-3">
-                  <FolderGit2 className="w-5 h-5 text-white/30 group-hover:text-[#10b981] transition-colors" />
-                  <span className="font-mono text-[8px] tracking-[0.2em] text-white/40">
+                  <Film className="w-4 h-4 text-white/30 group-hover:text-[#10b981] transition-colors" />
+                  <span className="font-mono text-[8px] tracking-[0.25em] text-white/40">
                     {proj.tag}
                   </span>
                 </div>
                 
-                {/* Micro Github stats */}
-                <div className="flex items-center gap-3 font-mono text-[9px] text-white/30 select-none">
-                  <span className="flex items-center gap-1">
-                    <Star className="w-3 h-3 text-yellow-500/60" /> {proj.stars}
-                  </span>
-                  <span className="flex items-center gap-1">
-                    <GitFork className="w-3 h-3" /> {proj.forks}
-                  </span>
+                {/* Download counter stats */}
+                <div className="flex items-center gap-2 font-mono text-[8px] tracking-wider text-white/35 select-none">
+                  <Download className="w-3.5 h-3.5 text-[#10b981]/80" />
+                  <span>{proj.stars}+ DOWNLOADS</span>
                 </div>
               </div>
 
@@ -155,7 +151,7 @@ export default function PersonalProjects() {
                   ))}
                 </div>
                 <span className="font-mono text-[8px] tracking-widest text-[#10b981]/50 group-hover:text-[#10b981] transition-colors">
-                  LAUNCH_CODE
+                  {proj.id === "aces-lookdev" ? "GET_LUT" : proj.id === "analog-glitch-presets" ? "GET_PRESETS" : "LAUNCH_TOOL"}
                 </span>
               </div>
 

@@ -40,7 +40,7 @@ export default function Header() {
     <>
       <header
         id="main-navigation-header"
-        className={`fixed top-0 left-0 w-full z-40 transition-all duration-500 border-b ${
+        className={`fixed top-0 left-0 w-full z-[30] transition-all duration-500 border-b ${
           isScrolled
             ? "bg-[#030305]/75 backdrop-blur-md border-white/[0.06] py-3"
             : "bg-transparent border-transparent py-5"

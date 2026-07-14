@@ -36,9 +36,9 @@ export default function App() {
         <StatementSection
           id="vision-break"
           tag="SELECTED VISION"
-          statement="WE ARE NOT DESIGNING PAGES. WE ARE PROGRAMMING HIGHER STIMULUS DIGITAL ENVIRONMENTS."
-          highlightWords={["PROGRAMMING", "HIGHER", "STIMULUS"]}
-          description="In a web saturated with generic grids and basic panels, premium visual identity is the ultimate discriminator. We build experiences for those who understand the language of detail."
+          statement="WE ARE NOT JUST CUTTING CLIPS. WE ARE CRAFTING HIGH-STIMULUS VISUAL NARRATIVES."
+          highlightWords={["VISUAL", "HIGH-STIMULUS", "NARRATIVES"]}
+          description="In a world saturated with generic content, premium pacing and color harmony are the ultimate discriminators. We shape stories for those who understand the language of detail."
         />
 
         {/* Alternating Portfolio Cases List */}
@@ -48,9 +48,9 @@ export default function App() {
         <StatementSection
           id="specialization-break"
           tag="CORE DUALITY"
-          statement="A RARE PARING OF RIGOROUS MATHEMATICAL PERFORMANCE AND HIGH-CONTRAST SENSORY REVEALS."
-          highlightWords={["MATHEMATICAL", "SENSORY", "REVEALS"]}
-          description="True professional applications must load instantly, scroll with absolute fluidity, and persist securely on durable state trees. Elegant form is meaningless without stable, responsive code."
+          statement="A RARE PAIRING OF RIGOROUS EDITING PRECISION AND BREATHTAKING COLOR GRADING."
+          highlightWords={["PRECISION", "COLOR", "GRADING"]}
+          description="True cinematic edits require perfect audio synchronization, invisible pacing, and meticulous visual grading. Every frame must load with intent, carry emotion, and command attention."
         />
 
         {/* Professional Experience Timeline */}

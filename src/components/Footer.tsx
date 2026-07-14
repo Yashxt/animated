@@ -70,15 +70,15 @@ export default function Footer() {
               <h2 className="font-display text-3xl sm:text-4xl md:text-5xl font-light tracking-tight text-white leading-[1.1]">
                 LET’S SHAPE<br />
                 <span className="font-normal text-transparent bg-clip-text bg-gradient-to-r from-white to-white/45">
-                  DIGITAL REALMS
+                  VISUAL STORIES
                 </span>
               </h2>
             </div>
 
             <p className="font-sans text-xs md:text-sm text-white/50 leading-relaxed font-light">
-              Whether you are mapping out a decentralized high-throughput trading desk, 
-              establishing atomic visual tokens, or exploring custom animations — my node 
-              is open. Let's build.
+              Whether you are mapping out a cinematic brand campaign, grading a narrative 
+              short film, or directing post-production motion effects — my studio is open. 
+              Let's create.
             </p>
 
             {/* Quick stats & time zone indicators */}
@@ -127,7 +127,7 @@ export default function Footer() {
                       value={formData.name}
                       onChange={handleInputChange}
                       required
-                      placeholder="e.g. Satoshi Nakamoto"
+                      placeholder="e.g. Christopher Nolan"
                       className="bg-black/40 border border-white/5 rounded px-4 py-3 font-sans text-xs text-white placeholder-white/20 focus:outline-none focus:border-[#10b981]/50 focus:bg-black/60 transition-all duration-300"
                     />
                   </div>
@@ -144,7 +144,7 @@ export default function Footer() {
                       value={formData.email}
                       onChange={handleInputChange}
                       required
-                      placeholder="e.g. satoshi@bitcoin.org"
+                      placeholder="e.g. nolan@synchropy.com"
                       className="bg-black/40 border border-white/5 rounded px-4 py-3 font-sans text-xs text-white placeholder-white/20 focus:outline-none focus:border-[#10b981]/50 focus:bg-black/60 transition-all duration-300"
                     />
                   </div>
@@ -162,7 +162,7 @@ export default function Footer() {
                     onChange={handleInputChange}
                     required
                     rows={4}
-                    placeholder="Describe your technical architecture or layout goals..."
+                    placeholder="Describe your project, reel requirements, or post-production goals..."
                     className="bg-black/40 border border-white/5 rounded px-4 py-3 font-sans text-xs text-white placeholder-white/20 focus:outline-none focus:border-[#10b981]/50 focus:bg-black/60 transition-all duration-300 resize-none"
                   />
                 </div>
@@ -210,8 +210,8 @@ export default function Footer() {
 
         {/* Legal copyright footer metadata row */}
         <div className="flex flex-col sm:flex-row items-center justify-between font-mono text-[8px] text-white/30 gap-4 mt-8">
-          <span>© 2026 MATVEYAN STUDIO. ALL SYSTEM CODES RESERVED.</span>
-          <span>MADE FOR DIGITAL CINEMATICS // HOST_NODE_RUNNING</span>
+          <span>© 2026 MATVEYAN STUDIO. ALL RIGHTS RESERVED.</span>
+          <span>MADE FOR CINEMATICS // STUDIO_NODE_RUNNING</span>
         </div>
 
       </div>

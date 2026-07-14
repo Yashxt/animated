@@ -13,43 +13,43 @@ interface TimelineItem {
 
 const EXPERIENCE_DATA: TimelineItem[] = [
   {
-    id: "lead-frontend-architect",
-    year: "24 — PRESENT",
-    role: "Lead Frontend Architect",
-    company: "DefiVentures Ltd",
-    location: "Zurich, CH (Remote)",
+    id: "color-grading-practice",
+    year: "MONTH 03",
+    role: "Resolve Color Page & Grading",
+    company: "Self-Directed Advanced Study",
+    location: "Remote Study",
     bullets: [
-      "Engineered multi-chain high-frequency trading interfaces, optimizing SVG and canvas layout calculations to hit a consistent 60fps on low-end devices.",
-      "Standardized atomic design token schemas across 4 discrete product suites, enabling rapid themed brand releases in under 2 weeks.",
-      "Coached a team of 6 engineers, transitioning the entire stack from legacy structures to Vite-optimized React apps."
+      "Mastered node-based color grading in DaVinci Resolve, practicing primary corrections, qualifiers, tracking, and cinematic look creation.",
+      "Completed color space transform exercises matching Sony S-Log3, ARRI LogC, and RED footage to ACES standards.",
+      "Developed custom PowerGrades, film print emulation trees, and LUT presets for practice sequences."
     ],
-    skills: ["React 19", "GSAP ScrollTrigger", "D3.js", "Design Systems"]
+    skills: ["Resolve Color Page", "ACES Color Space", "Film Emulation", "Node Tree Workflow"]
   },
   {
-    id: "senior-web-engineer",
-    year: "22 — 24",
-    role: "Senior Web Engineer",
-    company: "CrocoLabs Studio",
-    location: "Berlin, DE",
+    id: "editing-assembly-training",
+    year: "MONTH 02",
+    role: "Resolve Edit Page & Fairlight Audio",
+    company: "Portfolio Development",
+    location: "Remote Study",
     bullets: [
-      "Led the core development of the Solana-connected CrocoWallet, reaching 1.2M active users in 12 months.",
-      "Implemented hardware-connected Web3 auth and biometric security triggers, reducing login friction by 40%.",
-      "Migrated 14 repositories to atomic CSS modules, saving average bundle size by 35% and improving lighthouse scores."
+      "Assembled narrative rough and fine cuts for practice projects, trailer re-edits, and promo clips to study pacing and rhythm.",
+      "Synchronized multi-camera timelines and synced separate audio tracks using Resolve audio-wave matching.",
+      "Conformed timelines, cleaned up vocal noise, and structured audio tracks inside the Fairlight tab."
     ],
-    skills: ["Rust WASM", "TypeScript", "Tailwind CSS", "Solana SDK"]
+    skills: ["Resolve Edit Page", "Fairlight Audio", "Multi-Cam Timeline", "Audio Syncing"]
   },
   {
-    id: "frontend-developer",
-    year: "20 — 22",
-    role: "Frontend Developer",
-    company: "FintechNexus LLC",
-    location: "London, UK (Remote)",
+    id: "creative-foundations",
+    year: "MONTH 01",
+    role: "Resolve Fusion VFX & Deliver Workflows",
+    company: "Skill Acquisition",
+    location: "Remote Study",
     bullets: [
-      "Designed and deployed reusable charting systems using D3.js, tracking over $1B in daily asset movements.",
-      "Recreated mockups with pixel-perfect precision, adhering strictly to enterprise accessibility standards (WCAG AA).",
-      "Optimized real-time API integrations via custom hook throttling and lightweight WebSockets."
+      "Learned ingestion protocols, proxy workflows, transcoding, and formatting files for web and social platforms.",
+      "Practiced planar tracking, title animations, chroma keying, and simple VFX compositing inside the Fusion tab.",
+      "Configured advanced render profiles, queues, and transcode formats inside the Deliver tab."
     ],
-    skills: ["React", "D3.js", "GraphQL", "WebSockets", "Sass"]
+    skills: ["Fusion Node Trees", "Deliver Page Renders", "Planar Tracker", "Proxy Ingestion"]
   }
 ];
 
@@ -65,14 +65,14 @@ export default function Experience() {
         <div id="experience-header" className="flex flex-col md:flex-row md:items-end justify-between mb-20 gap-6">
           <div className="flex flex-col gap-3">
             <span className="font-mono text-xs tracking-[0.3em] text-[#10b981]">
-              [ 02 // PROFESSIONAL PATH ]
+              [ 02 // TRAINING & PRACTICE ]
             </span>
             <h2 className="font-display text-3xl sm:text-4xl md:text-5xl font-light tracking-tight text-white">
-              EXPERIENCE
+              LEARNING JOURNEY
             </h2>
           </div>
           <p className="font-sans text-xs md:text-sm text-white/40 max-w-xs font-light leading-relaxed">
-            Engineered, deployed, and supported high-fidelity applications at scale for leading fintech and decentralized protocols.
+            A detailed log of post-production study, skill acquisition, and hands-on portfolio practice projects.
           </p>
         </div>
 
