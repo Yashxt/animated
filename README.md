@@ -15,48 +15,57 @@ A moody, high-contrast portfolio with a "creative studio dashboard" aesthetic �
 
 ## 🧱 Tech Stack
 
-- **React** (Vite recommended for fast dev/build — or Create React App if preferred)
-- **React Router** — for section/page navigation (or just anchor-based scroll if single-page)
+- **React + TypeScript** (`.tsx`)
+- **Vite** — dev server & build tool (`vite.config.ts`)
+- **Tailwind CSS** — utility-first styling to match the dark/mono aesthetic
 - **Framer Motion** — for scroll animations, hover states, page transitions
-- **Tailwind CSS** — utility-first styling to match the dark/mono aesthetic quickly
 - **Lucide React** (or React Icons) — for GitHub/LinkedIn/Twitter/social icons
-- No backend — content lives in local JS/JSON data files
-- Contact form (if included) uses a static form service like **Formspree** or `mailto:` link (still no custom backend)
+- No backend — content lives in local `.ts`/`.json` data files
+- Contact form (if included) uses a static form service like **Formspree** or a `mailto:` link (still no custom backend)
 
 ---
 
-## 📁 Suggested Folder Structure
+## 📁 Actual Folder Structure
+
+This matches the current repo layout (Vite + React + TypeScript):
 
 ```
-matveyan-studio/
+animated/
 ├── public/
 │   └── assets/
-│       ├── hero-bg.jpg / hero-bg.mp4
-│       ├── projects/
-│       └── icons/
+│       └── silver-knight/        # background/hero images used in the design
 ├── src/
-│   ├── components/
-│   │   ├── Navbar.jsx
-│   │   ├── Hero.jsx
-│   │   ├── AvailabilityBadge.jsx
-│   │   ├── WorkSection.jsx
-│   │   ├── ExperienceSection.jsx
-│   │   ├── SkillsSection.jsx
-│   │   ├── ProjectsSection.jsx
-│   │   ├── InfoSection.jsx / ContactSection.jsx
-│   │   ├── Footer.jsx
-│   │   └── ScrollIndicator.jsx
-│   ├── data/
-│   │   ├── projects.js
-│   │   ├── experience.js
-│   │   └── skills.js
-│   ├── App.jsx
-│   ├── main.jsx
-│   └── index.css
-├── index.html
-├── tailwind.config.js
+│   ├── components/                # all UI section components (Navbar, Hero, etc.)
+│   ├── App.tsx                    # root component, composes all sections
+│   ├── main.tsx                   # React entry point (mounts <App /> to DOM)
+│   └── index.css                  # global styles / Tailwind directives
+├── .env.example                   # placeholder for any env vars (no backend, so likely unused/minimal)
+├── .gitignore
+├── index.html                     # Vite HTML entry
+├── metadata.json                  # project metadata (used by AI Studio tooling if applicable)
 ├── package.json
+├── package-lock.json
+├── tsconfig.json                  # TypeScript config
+├── vite.config.ts                 # Vite build config
 └── README.md
+```
+
+> Note: this project uses **.tsx** (TypeScript + React), not plain `.jsx` — so all components should be typed. Since there's no backend, `.env.example` will mostly hold things like a public form endpoint (e.g. Formspree ID) if you add a contact form, not any secret keys.
+
+### Recommended `src/components/` breakdown
+
+```
+src/components/
+├── Navbar.tsx
+├── Hero.tsx
+├── AvailabilityBadge.tsx
+├── WorkSection.tsx
+├── ExperienceSection.tsx
+├── SkillsSection.tsx
+├── ProjectsSection.tsx
+├── InfoSection.tsx
+├── Footer.tsx
+└── ScrollIndicator.tsx
 ```
 
 ---
@@ -89,22 +98,32 @@ matveyan-studio/
 
 ## ⚙️ Setup Instructions
 
-```bash
-# 1. Create the project (Vite is fastest for React)
-npm create vite@latest matveyan-studio -- --template react
+The project already exists (Vite + React + TS scaffold). To run it locally:
 
-cd matveyan-studio
+```bash
+# 1. Clone the repo
+git clone https://github.com/Yashxt/animated.git
+cd animated
+
+# 2. Install dependencies
 npm install
 
-# 2. Install Tailwind CSS
-npm install -D tailwindcss postcss autoprefixer
-npx tailwindcss init -p
-
-# 3. Install animation & icon libraries
-npm install framer-motion lucide-react
+# 3. Copy env example (only needed if you add a form endpoint etc.)
+cp .env.example .env
 
 # 4. Start dev server
 npm run dev
+
+# 5. Build for production
+npm run build
+```
+
+If Tailwind, Framer Motion, or Lucide aren't installed yet, add them with:
+
+```bash
+npm install -D tailwindcss postcss autoprefixer
+npx tailwindcss init -p
+npm install framer-motion lucide-react
 ```
 
 ### Tailwind config essentials
